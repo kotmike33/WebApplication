@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title>OpenStreetMap</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+<body>
+<div id="sidebar">
+    <button id="sidebar-handle" onclick="toggleSidebar()"></button>
+    <h2>Explorer</h2>
+    <div id="search-container" class="search-container">
+        <div class="mq-search-box">
+            <form class="search-input-form" data-cy="search-input-form">
+                <input type="text" name="main-search-input" id="main-search-input" class="search-input" placeholder="Search" autocomplete="off" value="">
+                <button id="search-button" type="button"></button>
+            </form>
+        </div>
+    </div>
+    <div id="search-results">
+        <ul id="search">
+            <li class="search-result">
+                <p>Hello!!!!!!!</p>
+            </li>
+            <li class="search-result">
+                <p>This is the template for the Search!</p>
+            </li>
+            <li class="search-result">
+                <p>Gooooodbye!</p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="map"></div>
+<div class="context-menu">
+    <ul>
+        <button class="context-button" id="context-new-place">Add new place</button>
+        <button class="context-button" id="context-copyloc">Copy location link</button>
+    </ul>
+</div>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" type="text/javascript"></script>
+<script th:src="@{/js/main-scripts.js}"></script>
+<script th:src="@{/js/main-context-menu.js}"></script>
+</body>
+</html>
